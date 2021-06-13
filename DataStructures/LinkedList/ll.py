@@ -49,3 +49,12 @@ class linkedlist:
 
 		else:
 			self.insert_at_end(data)
+
+	def get_length(self):
+		counter = 0
+		temp = self.head
+		while temp:
+			counter+=1
+			temp = temp.next
+		print("Total length of linkedlist is, ", counter)
+		return counter
