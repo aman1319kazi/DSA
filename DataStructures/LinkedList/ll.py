@@ -23,3 +23,29 @@ class linkedlist:
 
 		temp.next = node(data)
 
+	#add node at any location
+	def insert_at_index(self, index, data):
+		if not self.head or index==0:
+			self.insert_at_beginning(data)
+			return
+
+		if index < 0 :
+			if -(index) <= self.get_length()+1:	
+				index = self.get_length()-(-(index)) + 1 
+			else:
+				self.insert_at_beginning(data)
+				return
+
+		if index>=1 and index<=self.get_length():
+			temp = self.head
+			counter = 0
+			while temp:
+				if counter == index-1:
+					Node = node(data, temp.next)
+					temp.next = Node
+					return
+				counter+=1
+				temp = temp.next
+
+		else:
+			self.insert_at_end(data)
