@@ -58,3 +58,26 @@ class linkedlist:
 			temp = temp.next
 		print("Total length of linkedlist is, ", counter)
 		return counter
+
+	#remove node at first location
+
+	#remove node at last location
+
+	#remove node at any location
+
+	#display linkedlist in order
+	def display(self):
+		if not self.head:
+			return "Empty linkedlist"
+
+		temp = self.head
+		while temp:
+			print(temp.data,"-> ", end="")
+			temp = temp.next
+
+li = linkedlist()
+li.insert_at_beginning(3)
+li.insert_at_end(13)
+li.insert_at_end(30)
+li.insert_at_index(-2,32)
+li.display()
