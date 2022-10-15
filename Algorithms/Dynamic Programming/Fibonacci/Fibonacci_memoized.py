@@ -2,7 +2,7 @@ def fibonacci(number, memo):
 	if number in memo:
 		return memo[number]
 
-	if number < 2:
+	if number < 2 and number > -1:
 		memo[number] = number
 		return number
 
